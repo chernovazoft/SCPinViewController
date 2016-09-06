@@ -49,7 +49,8 @@ static SCPinAppearance *appearance;
 #pragma mark - initialization
 
 - (instancetype)initWithScope:(SCPinViewControllerScope)scope {
-    self = [super initWithNibName:NSStringFromClass([SCPinViewController class]) bundle:nil];
+    self = [super initWithNibName:NSStringFromClass([SCPinViewController class])
+                           bundle:[NSBundle bundleForClass:[SCPinViewController class]]];
     if (self) {
         _scope = scope;
         if (!appearance) {
