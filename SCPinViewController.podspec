@@ -13,7 +13,5 @@ Pod::Spec.new do |s|
 
   s.public_header_files = 'SCPinViewController/**/SC*.h'
   s.source_files = 'SCPinViewController/**/SC*.{m,h}'
-  s.resource_bundles = {
-    'SCPinViewControllerBudle' => ['SCPinViewController/**/*.{png}','SCPinViewController/**/*.{xib}']
-  }
+  s.resources = 'SCPinViewController/**/*.{xib,png}'
 end
