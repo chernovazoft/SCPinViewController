@@ -20,16 +20,12 @@ static SCPinAppearance *appearance;
 @interface SCPinViewController ()
 @property (nonatomic, strong) SCPinAppearance *appearance;
 
-
-@property (weak, nonatomic) IBOutlet UIButton *touchIDButton;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *supportLabel;
 @property (strong, nonatomic) IBOutletCollection(SCPinButton) NSArray *numberButtons;
+@property (weak, nonatomic) IBOutlet UIButton *touchIDButton;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (weak, nonatomic) IBOutlet UIView *viewForPins;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewForPinsLayoutConstraint;
 
-@property (nonatomic, strong) NSString *currentPin;
 @property (nonatomic, assign) BOOL enable;
 @property (nonatomic, assign) BOOL touchIDPassedValidation;
 @end
@@ -57,8 +53,6 @@ static SCPinAppearance *appearance;
             appearance = [SCPinAppearance defaultAppearance];
         }
         _appearance = appearance;
-
-
     }
     return self;
 }
@@ -72,7 +66,6 @@ static SCPinAppearance *appearance;
     [self setupInitialState];
     [self clearCurrentPin];
     [self createPinView];
-    
 }
 
 -(void)setupInitialState {
@@ -124,7 +117,6 @@ static SCPinAppearance *appearance;
     self.supportLabel.text = _appearance.supportText;
     self.supportLabel.font = _appearance.supportTextFont;
     self.supportLabel.textColor = _appearance.supportTextColor;
-
 }
 
 

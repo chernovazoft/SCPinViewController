@@ -23,6 +23,9 @@ typedef NS_ENUM(NSInteger, SCPinViewControllerScope) {
 + (SCPinAppearance *)appearance;
 + (void)setNewAppearance:(SCPinAppearance *)newAppearance;
 
+@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
+@property (nonatomic, weak) IBOutlet UILabel *supportLabel;
+@property (nonatomic, strong) NSString *currentPin;
 
 @property (nonatomic, assign, readonly) SCPinViewControllerScope scope;
 
