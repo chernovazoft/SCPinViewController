@@ -340,11 +340,6 @@ static SCPinAppearance *appearance;
 - (IBAction)deleteButtonAction:(UIButton *)sender {
     [self removeLastPincode];
     AudioServicesPlaySystemSound(0x450);
-
-}
-
-- (IBAction)supportButtonAction:(UIButton *)sender {
-    _appearance.supportButtonAction();
 }
 
 @end

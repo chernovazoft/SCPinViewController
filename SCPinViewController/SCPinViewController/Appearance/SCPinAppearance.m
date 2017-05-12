@@ -56,7 +56,6 @@
     self.supportTextColor = defaultColor;
     
     self.supportButtonAttributedText = nil;
-    self.supportButtonAction = nil;
 }
 
 @end
