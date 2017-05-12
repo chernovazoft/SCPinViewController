@@ -40,6 +40,6 @@
 @property (nonatomic, strong) NSString *touchIDText;
 
 @property (nonatomic, strong) NSAttributedString *supportButtonAttributedText;
-@property (copy, nonatomic) void(^supportButtonAction)();
+@property (nonatomic, copy) void(^supportButtonAction)();
 
 @end

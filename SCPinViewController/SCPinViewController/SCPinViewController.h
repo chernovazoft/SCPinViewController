@@ -25,6 +25,8 @@ typedef NS_ENUM(NSInteger, SCPinViewControllerScope) {
 
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, weak) IBOutlet UILabel *supportLabel;
+@property (nonatomic, weak) IBOutlet UIButton *supportButton;
+
 @property (nonatomic, strong) NSString *currentPin;
 
 @property (nonatomic, assign, readonly) SCPinViewControllerScope scope;
@@ -32,6 +34,8 @@ typedef NS_ENUM(NSInteger, SCPinViewControllerScope) {
 @property (nonatomic, weak) id<SCPinViewControllerCreateDelegate> createDelegate;
 @property (nonatomic, weak) id<SCPinViewControllerValidateDelegate> validateDelegate;
 @property (nonatomic, weak) id<SCPinViewControllerDataSource> dataSource;
+
+- (void) clearPinCode;
 
 @end
 

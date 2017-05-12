@@ -25,7 +25,6 @@ static SCPinAppearance *appearance;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (weak, nonatomic) IBOutlet UIView *viewForPins;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewForPinsLayoutConstraint;
-@property (weak, nonatomic) IBOutlet UIButton *supportButton;
 
 @property (nonatomic, assign) BOOL enable;
 @property (nonatomic, assign) BOOL touchIDPassedValidation;
@@ -43,7 +42,12 @@ static SCPinAppearance *appearance;
     appearance = newAppearance;
 }
 
-#pragma mark - initialization
+- (void)clearPinCode {
+    [self clearCurrentPin];
+    [self createPinView];
+}
+
+#pragma mark - Initialization
 
 - (instancetype)initWithScope:(SCPinViewControllerScope)scope {
     self = [super initWithNibName:NSStringFromClass([SCPinViewController class])
