@@ -53,6 +53,10 @@ static SCPinAppearance *appearance;
     self.supportLabel.text = subtitle;
 }
 
+- (void) setSupportButtonHidden: (BOOL)isHidden {
+    [self.supportButton setHidden:isHidden];
+}
+
 - (void)clearPinCode {
     [self clearCurrentPin];
     [self createPinView];

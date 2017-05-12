@@ -34,6 +34,7 @@ typedef NS_ENUM(NSInteger, SCPinViewControllerScope) {
 
 - (void) setTitle: (NSString*) title;
 - (void) setSubtitle: (NSString*) subtitle;
+- (void) setSupportButtonHidden: (BOOL) isHidden;
 - (void) clearPinCode;
 
 @end
