@@ -354,7 +354,7 @@ static SCPinAppearance *appearance;
 }
 
 - (IBAction)supportButtonAction:(UIButton *)sender {
-    self.supportAction()
+    self.supportAction();
 }
 
 @end
