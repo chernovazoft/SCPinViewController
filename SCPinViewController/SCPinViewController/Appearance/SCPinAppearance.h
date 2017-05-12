@@ -14,7 +14,7 @@
 @property (nonatomic, strong) UIColor *numberButtonColor;
 @property (nonatomic, strong) UIColor *numberButtonTitleColor;
 @property (nonatomic, strong) UIColor *numberButtonStrokeColor;
-@property (nonatomic, assign) CGFloat numberButtonStrokeWitdh;
+@property (nonatomic, assign) CGFloat numberButtonStrokeWidth;
 @property (nonatomic, assign) BOOL numberButtonstrokeEnabled;
 @property (nonatomic, strong) UIFont *numberButtonFont;
 
@@ -38,5 +38,8 @@
 @property (nonatomic, strong) UIFont *supportTextFont;
 
 @property (nonatomic, strong) NSString *touchIDText;
+
+@property (nonatomic, strong) NSAttributedString *supportButtonAttributedText;
+@property (copy, nonatomic) void(^supportButtonAction)();
 
 @end

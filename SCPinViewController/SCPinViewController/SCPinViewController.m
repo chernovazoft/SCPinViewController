@@ -25,6 +25,7 @@ static SCPinAppearance *appearance;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (weak, nonatomic) IBOutlet UIView *viewForPins;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewForPinsLayoutConstraint;
+@property (weak, nonatomic) IBOutlet UIButton *supportButton;
 
 @property (nonatomic, assign) BOOL enable;
 @property (nonatomic, assign) BOOL touchIDPassedValidation;
@@ -101,7 +102,7 @@ static SCPinAppearance *appearance;
         [button setTitleColor:_appearance.numberButtonTitleColor forState:UIControlStateSelected];
         [button setTitleColor:_appearance.numberButtonTitleColor forState:UIControlStateHighlighted];
         button.strokeColor = _appearance.numberButtonStrokeColor;
-        button.strokeWidth = _appearance.numberButtonStrokeWitdh;
+        button.strokeWidth = _appearance.numberButtonStrokeWidth;
         button.strokeColor = _appearance.numberButtonstrokeEnabled ? [_appearance numberButtonStrokeColor] : [UIColor clearColor];
         [button.titleLabel setFont:_appearance.numberButtonFont];
         [button setNeedsDisplay];
@@ -117,6 +118,8 @@ static SCPinAppearance *appearance;
     self.supportLabel.text = _appearance.supportText;
     self.supportLabel.font = _appearance.supportTextFont;
     self.supportLabel.textColor = _appearance.supportTextColor;
+    
+    self.supportButton.titleLabel.attributedText = _appearance.supportButtonAttributedText;
 }
 
 
@@ -334,6 +337,10 @@ static SCPinAppearance *appearance;
     [self removeLastPincode];
     AudioServicesPlaySystemSound(0x450);
 
+}
+
+- (IBAction)supportButtonAction:(UIButton *)sender {
+    _appearance.supportButtonAction();
 }
 
 @end
