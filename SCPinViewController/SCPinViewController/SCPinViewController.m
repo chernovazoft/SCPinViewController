@@ -20,6 +20,9 @@ static SCPinAppearance *appearance;
 @interface SCPinViewController ()
 @property (nonatomic, strong) SCPinAppearance *appearance;
 
+@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
+@property (nonatomic, weak) IBOutlet UILabel *supportLabel;
+@property (nonatomic, weak) IBOutlet UIButton *supportButton;
 @property (strong, nonatomic) IBOutletCollection(SCPinButton) NSArray *numberButtons;
 @property (weak, nonatomic) IBOutlet UIButton *touchIDButton;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
@@ -40,6 +43,14 @@ static SCPinAppearance *appearance;
 
 + (void)setNewAppearance:(SCPinAppearance *)newAppearance {
     appearance = newAppearance;
+}
+
+- (void)setTitle:(NSString *)title {
+    self.titleLabel.text = title;
+}
+
+- (void)setSubtitle:(NSString *)subtitle {
+    self.supportLabel.text = subtitle;
 }
 
 - (void)clearPinCode {
@@ -340,6 +351,10 @@ static SCPinAppearance *appearance;
 - (IBAction)deleteButtonAction:(UIButton *)sender {
     [self removeLastPincode];
     AudioServicesPlaySystemSound(0x450);
+}
+
+- (IBAction)supportButtonAction:(UIButton *)sender {
+    self.supportAction()
 }
 
 @end

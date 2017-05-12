@@ -23,18 +23,17 @@ typedef NS_ENUM(NSInteger, SCPinViewControllerScope) {
 + (SCPinAppearance *)appearance;
 + (void)setNewAppearance:(SCPinAppearance *)newAppearance;
 
-@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
-@property (nonatomic, weak) IBOutlet UILabel *supportLabel;
-@property (nonatomic, weak) IBOutlet UIButton *supportButton;
-
-@property (nonatomic, strong) NSString *currentPin;
-
 @property (nonatomic, assign, readonly) SCPinViewControllerScope scope;
 
 @property (nonatomic, weak) id<SCPinViewControllerCreateDelegate> createDelegate;
 @property (nonatomic, weak) id<SCPinViewControllerValidateDelegate> validateDelegate;
 @property (nonatomic, weak) id<SCPinViewControllerDataSource> dataSource;
 
+@property (nonatomic, copy) NSString *currentPin;
+@property (nonatomic, copy) void(^supportAction)();
+
+- (void) setTitle: (NSString*) title;
+- (void) setSubtitle: (NSString*) subtitle;
 - (void) clearPinCode;
 
 @end
