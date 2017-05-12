@@ -45,14 +45,6 @@ static SCPinAppearance *appearance;
     appearance = newAppearance;
 }
 
-- (void)setTitle:(NSString *)title {
-    self.titleLabel.text = title;
-}
-
-- (void)setSubtitle:(NSString *)subtitle {
-    self.supportLabel.text = subtitle;
-}
-
 - (void) setSupportButtonHidden: (BOOL)isHidden {
     [self.supportButton setHidden:isHidden];
 }

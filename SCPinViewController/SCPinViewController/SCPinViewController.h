@@ -32,8 +32,6 @@ typedef NS_ENUM(NSInteger, SCPinViewControllerScope) {
 @property (nonatomic, copy) NSString *currentPin;
 @property (nonatomic, copy) void(^supportAction)();
 
-- (void) setTitle: (NSString*) title;
-- (void) setSubtitle: (NSString*) subtitle;
 - (void) setSupportButtonHidden: (BOOL) isHidden;
 - (void) clearPinCode;
 
