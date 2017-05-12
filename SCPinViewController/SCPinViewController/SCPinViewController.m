@@ -119,7 +119,7 @@ static SCPinAppearance *appearance;
     self.supportLabel.font = _appearance.supportTextFont;
     self.supportLabel.textColor = _appearance.supportTextColor;
     
-    self.supportButton.titleLabel.attributedText = _appearance.supportButtonAttributedText;
+    [self.supportButton setAttributedTitle:_appearance.supportButtonAttributedText forState:UIControlStateNormal];
 }
 
 
